@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Reg3"
+             Title="Личный кабинет">
+
+  <StackLayout>
+    <Button 
+                BackgroundColor="#3897f0"
+                HeightRequest="45" 
+                TextColor="White"
+                Text="Сохранить" 
+                Clicked="GoToPage1" 
+                VerticalOptions="Start"
+                Margin="-10,80,0,0"/>
+
+    <Button
+            BackgroundColor="#3897f0"
+            HeightRequest="45" 
+            TextColor="White"
+            Text="Отмена" 
+            Clicked="Go3" 
+            VerticalOptions="Start"
+                />
+
+  </StackLayout>
+</ContentPage>

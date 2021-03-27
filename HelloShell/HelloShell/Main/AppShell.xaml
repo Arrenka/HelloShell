@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:HelloShell"
+             x:Class="HelloShell.AppShell">
+   
+    
+
+    <TabBar>
+        <Tab  Route="main" Title="Главная" Icon="ic_action_accessibility.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+
+        </Tab>
+        <Tab  Route="page1" Title="Закупки" Icon="baseline_post_add_black_18dp.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Page1}"/>
+            <!--<ShellContent Route="bid" ContentTemplate="{DataTemplate pages:Bid}"/>-->
+
+        </Tab>
+        <Tab  Route="page2" Title="Оплата" Icon="baseline_money_black_18dp.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Page2}"/>
+
+        </Tab>
+        <Tab  Route="page3" Title="Склад" Icon="baseline_foundation_black_18dp.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Page3}"/>
+
+        </Tab>
+
+        
+
+
+    </TabBar>
+
+
+    <TabBar >
+
+        <!--<Tab   >
+            <ShellContent Route="main" Title="Главная"
+                ContentTemplate="{DataTemplate pages:MainPage}"/>
+
+            <ShellContent  Route="page1" Title="Заявки"
+                      ContentTemplate="{DataTemplate pages:Page1}" />
+
+            <ShellContent Route="page2"  Title="Оплата" 
+                ContentTemplate="{DataTemplate pages:Page2}" />
+
+            <ShellContent Route="page3"  Title="Склад"
+                ContentTemplate="{DataTemplate pages:Page3}" />
+
+        </Tab>-->
+        <Tab IsEnabled="False" Route="bid">
+            <ShellContent ContentTemplate="{DataTemplate pages:Bid}"/>
+
+        </Tab>
+        <Tab IsEnabled="False" Route="bid2">
+            <ShellContent ContentTemplate="{DataTemplate pages:Bid2}"/>
+
+        </Tab>
+    
+
+        <Tab IsEnabled="False"  Route="login" >
+            <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}"/>
+
+        </Tab>
+
+        <Tab IsEnabled="False" Route="reg">
+            <ShellContent ContentTemplate="{DataTemplate pages:Reg}"/>
+
+        </Tab>
+
+        <Tab IsEnabled="False" Route="list">
+            <ShellContent ContentTemplate="{DataTemplate pages:ListViewPage}"/>
+
+        </Tab>
+
+
+
+        <!--<Tab IsEnabled="False" >
+            <ShellContent  Route="reg1" Title="Профиль"
+                          ContentTemplate="{DataTemplate pages:Reg1}"/>
+
+            <ShellContent  Route="reg2" Title="Компания"
+                      ContentTemplate="{DataTemplate pages:Reg2}" />
+
+            <ShellContent  Route="reg3" Title="Дополнительно"
+                      ContentTemplate="{DataTemplate pages:Reg3}" />
+
+        </Tab>-->
+
+
+
+    </TabBar>
+    <TabBar>
+        <Tab  Route="reg1" Title="Профиль" Icon="baseline_perm_identity_black_18dp.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Reg1}"/>
+
+        </Tab>
+        <Tab  Route="reg2" Title="Компания" Icon="baseline_corporate_fare_black_18dp.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Reg2}"/>
+
+        </Tab>
+        <Tab  Route="reg3" Title="Дополнительно">
+            <ShellContent ContentTemplate="{DataTemplate pages:Reg3}"/>
+
+        </Tab>
+
+    </TabBar>
+
+
+
+    <!--<ShellItem Route="Login">
+
+        <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}"/>
+
+    </ShellItem>-->
+
+</Shell> 

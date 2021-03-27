@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Bid"
+             Title="Заявки" BackgroundColor="WhiteSmoke">
+
+
+    <CollectionView  x:Name="BidList1" Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                        SelectionMode="None" ItemsSource="{Binding}"  >
+        <!--<CollectionView.Header>
+                    <Label Text="Закупки" TextColor="Black" FontSize="18"/>
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+                </CollectionView.ItemsLayout>-->
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame BorderColor="#3897f0" CornerRadius="2" BackgroundColor="Transparent" VerticalOptions="StartAndExpand" Margin="5,0,5,0">
+
+                    <Expander BackgroundColor="White" Margin="-10,-10,-10,-10">
+
+                        <Expander.Header>
+                            
+                            
+
+
+
+                            <Grid HorizontalOptions="FillAndExpand" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="3.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                                    <!--<Label Text="№ Заявки : " TextColor="Black" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="0,-10,0,0"/>-->
+                                    <Label  Text="{Binding Cod}" TextColor="#2F3246" FontSize="17" 
+                                                   HorizontalOptions="Center" Margin="10,-10,0,0"/>
+
+                                </StackLayout>
+                                <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
+                                                 VerticalOptions="FillAndExpand"/>
+                                <StackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" Margin="20">
+
+                                    <Label Text="{Binding Vid}" TextColor="#FF8B0000" HorizontalOptions="Center" FontSize="17" BackgroundColor="Pink" VerticalOptions="Center" />
+                                    <Label Text="______________________________________________" TextColor="#3897f0" FontSize="10"/>
+                                    <Label Text="{Binding Name}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                        </Expander.Header>
+
+                        <Grid Padding="30">
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+
+                                <Label Text="Единица измерения:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-30,-15,0,0"/>
+                                <Label  Text="Количество:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-87,-10,0,0"/>
+                                <Label  Text="Цена открытия:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-63,-10,0,0"/>
+                                <Label  Text="Срок доставки:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-67,-10,0,0"/>
+                                <Label  Text="Ценов. пред.:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-79,-10,0,0"/>
+                                <Label  Text="Условия доставки:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-37,-10,0,0"/>
+                                <Label  Text="    " TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-37,-10,0,0"/>
+                                <Label  Text="Харак. мат.:" TextColor="#2F3246" FontSize="15" 
+                                                   HorizontalOptions="Center" Margin="-87,-10,0,0"/>
+
+                            </StackLayout>
+
+                            <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
+                                                 VerticalOptions="FillAndExpand"/>
+                            <StackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" Margin="20">
+
+                                <!--<Entry Text="{Binding Path=Ed}"  TextColor="#2F3246" FontSize="15" />
+                                <Entry Text="{Binding Path=Count}"  TextColor="#2F3246" FontSize="15" />
+                                <Entry Text="{Binding Path=Cenov}"  TextColor="#2F3246" FontSize="15" />
+                                <Entry Text="{Binding Path=Srok}"  TextColor="#2F3246" FontSize="15" />
+                                <Entry Text="{Binding Path=Price}"  TextColor="#2F3246" FontSize="15" />
+                                <Entry Text="{Binding Path=Uslov}"  TextColor="#2F3246" FontSize="15" />
+                                <Entry Text="{Binding Path=Charak}"  TextColor="#2F3246" FontSize="15" />-->
+
+
+
+                                <Label  x:Name="EdEntry" Text="{Binding Ed}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                                <Label  x:Name="CountEntry" Text="{Binding Count}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                                <Label x:Name="CenovEntry" Text="{Binding Cenov}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                                <Label x:Name="SrokEntry" Text="{Binding Srok}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                                <Label x:Name="PriceEntry" Text="{Binding Price}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                                <Label x:Name="UslovEntry" Text="{Binding Uslov}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                                <Label x:Name="CharakEntry" Text="{Binding Charak}" TextColor="#2F3246" FontSize="15" Margin="0,-10,0,0"/>
+                               
+
+
+                            </StackLayout>
+
+                            <StackLayout>
+                 
+                                      <ImageButton Source="baseline_login_black_18dp.png"
+                                         VerticalOptions="Center"
+                                         x:Name="btnchecked"
+                                         HorizontalOptions="Center"
+                                         Command="{Binding ButtonClicked}"
+                                         CommandParameter="{Binding }"
+                                         Grid.Column="2"
+                                         Aspect="AspectFit"
+                                         BackgroundColor="#FF5D7F"
+                                                       Margin="-30,200,0,0"
+                                              Clicked="EditListButton_Clicked" />
+                                 
+
+                            </StackLayout>
+                            <StackLayout>
+                                <Button
+                                     BackgroundColor="#3897f0"
+                                     HeightRequest="35" 
+                                     TextColor="White"
+                                     Text="Подача" 
+                                     Clicked="Button_Clicked" 
+                                     Margin="-30,240,0,0"/>
+
+                            </StackLayout>
+
+
+
+                        </Grid>
+                        
+                    </Expander>
+
+
+
+
+                </Frame>
+
+            </DataTemplate>
+
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+
+
+
+
+</ContentPage>

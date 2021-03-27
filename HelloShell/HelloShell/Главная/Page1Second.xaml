@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Page1Second"
+             Title="Строительные материалы">
+
+
+    <StackLayout>
+        <Entry x:Name="numEntry" Text="{Binding Path=Num}"  TextColor="Black"/>
+        <Entry x:Name="nameEntry" Text="{Binding Path=Name}"  TextColor="Black"/>
+        <Entry x:Name="date1Entry" Text="{Binding Path=Date1}"  TextColor="Black"/>
+        <Entry x:Name="date2Entry" Text="{Binding Path=Date2}"  TextColor="Black"/>
+        <Entry x:Name="date3Entry" Text="{Binding Path=Date3}"  TextColor="Black"/>
+        <Entry x:Name="companyEntry" Text="{Binding Path=Company}" TextColor="Black"  />
+        <Entry x:Name="regiEntry" Text="{Binding Path=Company}" TextColor="Black"  />
+        <Entry x:Name= "statEntry" Text="{Binding Path=Company}" TextColor="Black"  />
+        <Entry x:Name="priceLbl" Text="{Binding Path=Price}" TextColor="Black"/>
+
+        <!--<StackLayout Orientation="Horizontal">
+            <Stepper x:Name="priceStepper" Minimum="0" Maximum="100000" Increment="100"
+               Value="{Binding Path=Price}"/>
+            <Label x:Name="priceLbl" FontSize="Large"
+             Text="{Binding Source={x:Reference Name=priceStepper}, Path=Value }" />
+        </StackLayout>-->
+        <Button Text="Сохранить изменения" Clicked="SavePage1" />
+        <!--<Button Text="Выбрать заявку для оплаты" Clicked="AddToPage2" />-->
+      
+    </StackLayout>
+
+
+</ContentPage>

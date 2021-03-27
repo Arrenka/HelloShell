@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.ListViewPage1"
+             Title="{Binding Cod}">
+    <StackLayout>
+
+        <Label Text="{Binding Name}"  TextColor="#3897f0" FontSize="15"/>
+
+        <Label Text="Ед. изм.:" TextColor="#3897f0" FontSize="15"/>
+        <Entry Text="{Binding Path=Ed}"  TextColor="#2F3246" FontSize="15" />
+        <Label Text="Количество:" TextColor="#3897f0" FontSize="15"/>
+        <Entry Text="{Binding Path=Count}"  TextColor="#2F3246" FontSize="15" />
+        <Label Text="Цена за ед.:" TextColor="#3897f0" FontSize="15"/>
+        <Entry Placeholder=""  TextColor="#2F3246" FontSize="15" />
+
+        <Label x:Name="label" Text="Дата объявления:" TextColor="#3897f0" FontSize="15"/>
+        <DatePicker Format="D" DateSelected="datePicker_DateSelected">
+            <DatePicker.MinimumDate>6/01/2019</DatePicker.MinimumDate>
+            <DatePicker.MaximumDate>6/30/2022</DatePicker.MaximumDate>
+        </DatePicker>
+
+
+        <Label Text="Комментария:" TextColor="#3897f0" FontSize="15"/>
+
+        <Entry Placeholder=""  TextColor="#2F3246" FontSize="15" />
+        
+
+        <Button
+                                    
+                                     BackgroundColor="#3897f0"
+                                     HeightRequest="35" 
+                                     TextColor="White"
+                                     Text="сохранить" 
+                                     Clicked="ToPage1"
+                                     />
+        <Button
+                                    
+                                     BackgroundColor="#3897f0"
+                                     HeightRequest="35" 
+                                     TextColor="White"
+                                     Text="отмена" 
+                                      Clicked="ToBack"
+                                    />
+
+
+    </StackLayout>
+</ContentPage>

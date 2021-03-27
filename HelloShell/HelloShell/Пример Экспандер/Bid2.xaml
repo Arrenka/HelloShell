@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Bid2">
+    <StackLayout>
+        <Entry Text="{Binding Path=Ed}"  TextColor="#2F3246" FontSize="15" />
+        <!--<Entry Text="{Binding Path=Count}"  TextColor="#2F3246" FontSize="15" />
+        <Entry Text="{Binding Path=Cenov}"  TextColor="#2F3246" FontSize="15" />
+        <Entry Text="{Binding Path=Srok}"  TextColor="#2F3246" FontSize="15" />
+        <Entry Text="{Binding Path=Price}"  TextColor="#2F3246" FontSize="15" />
+        <Entry Text="{Binding Path=Uslov}"  TextColor="#2F3246" FontSize="15" />
+        <Entry Text="{Binding Path=Charak}"  TextColor="#2F3246" FontSize="15" />-->
+
+        <!--<StackLayout Orientation="Horizontal">
+            <Stepper x:Name="priceStepper" Minimum="0" Maximum="100000" Increment="100"
+               Value="{Binding Path=Price}"/>
+            <Label x:Name="priceLbl" FontSize="Large"
+             Text="{Binding Source={x:Reference Name=priceStepper}, Path=Value }" />
+        </StackLayout>-->
+       
+        <!--<Button Text="Выбрать заявку для оплаты" Clicked="AddToPage2" />-->
+
+    </StackLayout>
+</ContentPage>

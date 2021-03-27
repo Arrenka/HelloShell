@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Reg"
+             Title="Регистрация">
+
+    <StackLayout Margin="10,-15,10,-10">
+
+        <Label Text="Создание новой учетной записи."  TextColor="#3897f0" FontSize="20" Margin="5,20,0,0"/>
+
+        <!--<Entry  Text="Адрес электронной почты"  TextColor="Black" Margin="20,20,0,0"/>
+        <Entry  Text="Пароль" TextColor="Black" Margin="20,20,0,0" />
+        <Entry Text="Подтверждение пароля" TextColor="Black" Margin="20,20,0,0" />-->
+
+        <TableView Margin="-10, 0, 0, -20"  >
+            <TableView.Root >
+                <TableRoot >
+                    <TableSection Title="Адрес электронной почты:" TextColor="#3897f0" >
+                        <EntryCell  Placeholder="Введите адрес электронной почты" />
+
+                    </TableSection>
+                    <TableSection Title="Пароль:" TextColor="#3897f0">
+                        <EntryCell  Placeholder="Введите пароль" />
+
+                    </TableSection>
+                    <TableSection Title="Подтверждение пароля:" TextColor="#3897f0">
+                        <EntryCell  Placeholder="Подтвердите пароль" />
+
+                    </TableSection>
+                    
+
+                </TableRoot>
+      
+                
+            </TableView.Root>
+            
+        </TableView>
+
+        <Button Grid.Row="5"  
+                BackgroundColor="#3897f0"
+                HeightRequest="45" 
+                TextColor="White"
+                Text="Регистрация" 
+                Clicked="GoToForward" 
+                VerticalOptions="Start"
+                Margin="-10,80,0,0"/>
+        <Button
+            BackgroundColor="#3897f0"
+            HeightRequest="45" 
+            TextColor="White"
+            Text="Назад" 
+            Clicked="GoToBack" />
+
+    </StackLayout>
+
+
+
+
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Page2">
+
+    <StackLayout>
+
+
+        <ListView x:Name="Page1List" ItemsSource="{Binding}" ItemSelected="OnListViewItemSelected2">
+            <ListView.Header>
+                <Grid BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <Label Text="КОД" HorizontalOptions="Fill"  Grid.Column="0"  FontSize="16"  BackgroundColor="WhiteSmoke" TextColor="#3897f0" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="НАИМЕНОВАНИЕ" HorizontalOptions="Fill"  Grid.Column="1" FontSize="16"  BackgroundColor="WhiteSmoke" TextColor="#3897f0" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="ЦЕНОВ. ПРЕД." HorizontalOptions="Fill"  Grid.Column="2"  FontSize="16"  BackgroundColor="WhiteSmoke" TextColor="#3897f0" HorizontalTextAlignment="Center" Margin="1"/>
+
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Num}" HorizontalOptions="Fill" Grid.Column="0" FontSize="16" BackgroundColor="White" TextColor="Black" HorizontalTextAlignment="Center" Margin="1"/>
+                                <Label Text="{Binding Company}" HorizontalOptions="Fill" Grid.Column="1" FontSize="16" BackgroundColor="White" TextColor="Black" HorizontalTextAlignment="Center" Margin="1"/>
+                                <Label Text="{Binding Price}" HorizontalOptions="Fill" Grid.Column="2" FontSize="16" BackgroundColor="White" TextColor="Black" HorizontalTextAlignment="Center" Margin="1" />
+                                
+                                
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+
+
+
+
+
+</ContentPage>

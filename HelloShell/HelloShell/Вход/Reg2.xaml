@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Reg2"
+             Title="Личный кабинет">
+
+    <StackLayout Margin="10,-15,10,-10">
+
+        <!--<Label Text="Для регистраций заполните личный кабинет."  TextColor="#3897f0" FontSize="20" Margin="5,20,0,0"/>-->
+
+
+        <TableView Margin="-10, 10, 0, -50"  >
+            <TableView.Root >
+                <TableRoot >
+                    <TableSection Title="Наименование компаний:" TextColor="#3897f0" Grid.Column="1" >
+                        <EntryCell  Placeholder="Введите Вашу компанию" />
+
+                    </TableSection>
+                    
+                    <TableSection Title="Адрес:" TextColor="#3897f0" Grid.Column="0" >
+                        <EntryCell  Placeholder="Введите юридический адрес" />
+                        <EntryCell  Placeholder="Введите фактический адрес" />
+                        <EntryCell  Placeholder="Введите сайт" />
+                        <EntryCell Keyboard="Email" Placeholder="Введите email" />
+                        <EntryCell  Placeholder="Введите регион" />
+                    </TableSection>
+
+                    <TableSection Title="Сфера деятельности и отзывы:" TextColor="#3897f0" Grid.Column="0" >
+                        <EntryCell  Placeholder="Введите сфера деятельности" />
+                        <EntryCell  Placeholder="Введите описание" />
+                        <SwitchCell Text="Отечественный производитель" />
+                        
+                    </TableSection>
+
+
+
+                    <TableSection Title="Контактные телефоны и БИН:" TextColor="#3897f0" Grid.Column="2" >
+                        <EntryCell Keyboard="Telephone" Placeholder="Телефон 1" />
+                        <EntryCell Keyboard="Telephone" Placeholder="Телефон 2" />
+                        <EntryCell Keyboard="Telephone" Placeholder="Факс" />
+                        <EntryCell Keyboard="Telephone" Placeholder="БИН" />
+
+                    </TableSection>
+                    
+                    <TableSection Title="Страна:" TextColor="#3897f0" Grid.Column="1" >
+                        <EntryCell  Placeholder="Введите страну" />
+
+                    </TableSection>
+
+
+                    <TableSection Title="Банковские реквизиты:" TextColor="#3897f0" Grid.Column="2" >
+                        <EntryCell Keyboard="Telephone" Placeholder="Введите КБЕ" />
+                        <EntryCell Keyboard="Telephone" Placeholder="Введите ИИК" />
+                        <EntryCell Keyboard="Telephone" Placeholder="Введите БИК" />
+                        <EntryCell Placeholder="Наименование банка" />
+
+                    </TableSection>
+
+                </TableRoot>
+
+
+            </TableView.Root>
+
+        </TableView>
+
+        <Button Grid.Row="6"  
+                BackgroundColor="#3897f0"
+                HeightRequest="45" 
+                TextColor="White"
+                Text="Сохранить" 
+                Clicked="GoToForward" 
+                VerticalOptions="Start"
+                Margin="-10,80,0,0"/>
+        <Button
+            BackgroundColor="#3897f0"
+            HeightRequest="45" 
+            TextColor="White"
+            Text="Отмена" 
+            Clicked="ToReg1" />
+
+    </StackLayout>
+
+
+
+
+
+</ContentPage>

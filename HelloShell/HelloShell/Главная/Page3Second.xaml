@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Page3Second"
+             Title="Доставка материала">
+
+    <StackLayout>
+        <Entry x:Name="nameEntry" Text="{Binding Path=Name}"  TextColor="Black"/>
+        <!--<Entry  Text="Доставка до обьекта" TextColor="Black"  />-->
+        <Entry x:Name="companyEntry" Text="{Binding Path=Company}" TextColor="Black"  />
+        <!--<Entry x:Name="priceLbl" Text="{Binding Path=Price}" TextColor="Black"/>-->
+   
+
+        <!--<StackLayout Orientation="Horizontal">
+            <Stepper x:Name="priceStepper" Minimum="0" Maximum="100000" Increment="100"
+               Value="{Binding Path=Price}"/>
+            <Label x:Name="priceLbl" FontSize="Large"
+             Text="{Binding Source={x:Reference Name=priceStepper}, Path=Value }" />
+        </StackLayout>-->
+
+        
+        <!--<Button Text="Оплатить" Clicked="AddToPage3" />-->
+        <TableView Margin="-10, -25, 0, -25">
+            <TableView.Root>
+                <TableRoot>
+                    <TableSection Title="Регион доставки" TextColor="#3897f0" >
+                        <EntryCell  Keyboard="Default" Placeholder="Введите город" />
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+
+        <TableView Margin="-10, -135, 0, -25">
+            <TableView.Root>
+                <TableRoot>
+                    <TableSection Title="Адрес" TextColor="#3897f0">
+                        <EntryCell  Placeholder="Введите адрес" />
+
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+        <TableView Margin="-10, -135, 0, -25">
+            <TableView.Root>
+                <TableRoot>
+
+                    <TableSection Title="Контакты" TextColor="#3897f0">
+                        <EntryCell Label="Телефон: " Keyboard="Telephone" Placeholder="номер телефона" />
+                        <SwitchCell Text="Сохранить" />
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+        <Button Text="Доставить до обьекта" Clicked="SavePage1" />
+    </StackLayout>
+    
+
+
+
+
+</ContentPage>

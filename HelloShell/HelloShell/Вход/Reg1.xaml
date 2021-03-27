@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloShell.Reg1"
+             Title="Личный кабинет">
+
+
+    <StackLayout Margin="10,-15,10,-10">
+
+        <Label Text="Для регистраций заполните личный кабинет."  TextColor="#3897f0" FontSize="20" Margin="5,20,0,0"/>
+
+
+        <TableView Margin="-10, 0, 0, -50"  >
+            <TableView.Root >
+                <TableRoot >
+                    <TableSection Title="Фамилия Имя Отчество:" TextColor="#3897f0" Grid.Column="0" >
+                        <EntryCell  Placeholder="Введите Вашу фамилию" />
+                        <EntryCell  Placeholder="Введите Ваше имя" />
+                        <EntryCell  Placeholder="Введите Ваше отчество" />
+                    </TableSection>
+
+                    
+
+                    <TableSection Title="Контакты:" TextColor="#3897f0" Grid.Column="2" >
+                        <EntryCell Keyboard="Telephone" Placeholder="Введите телефон" />
+                        <EntryCell Keyboard="Email" Placeholder="Введите email" />
+                    </TableSection>
+                    <TableSection Title="Должность:" TextColor="#3897f0" Grid.Column="1" >
+                        <EntryCell  Placeholder="Введите должность" />
+
+                    </TableSection>
+                    <TableSection Title="Регион:" TextColor="#3897f0" Grid.Column="3" >
+                        
+                        <EntryCell  Keyboard="Default" Placeholder="Введите регион" />
+                  
+                    </TableSection>
+
+
+                </TableRoot>
+
+
+            </TableView.Root>
+
+        </TableView>
+
+        <Button Grid.Row="6"
+                BackgroundColor="#3897f0"
+                HeightRequest="45" 
+                TextColor="White"
+                Text="Сохранить" 
+                Clicked="GoToForward" 
+                VerticalOptions="Start"
+                Margin="-10,80,0,0"/>
+        <Button
+            BackgroundColor="#3897f0"
+            HeightRequest="45" 
+            TextColor="White"
+            Text="Отмена" 
+            Clicked="GoToBack" />
+
+    </StackLayout>
+
+
+
+</ContentPage>
